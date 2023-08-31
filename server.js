@@ -17,7 +17,9 @@ DBconnection();
 
 // using cors for production
 var cors = require('cors')
-app.use(cors())
+app.use(cors({
+  origin :["http://localhost:3000" , "https://frontend-for-ecommerce.onrender.com"]
+}))
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
